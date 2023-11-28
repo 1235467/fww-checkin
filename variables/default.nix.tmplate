@@ -1,0 +1,8 @@
+{
+#sosad cookies
+session = "";
+#Telegram ChatID
+chatid = "";
+#Telegram Bot Token
+botsecret = "";
+}

@@ -660,6 +660,7 @@ let
     let
       nodeDependencies = buildNodeDependencies args;
       extraArgs = removeAttrs args [ "name" "dependencies" "buildInputs" "dontStrip" "dontNpmInstall" "unpackPhase" "buildPhase" ];
+      variables = import ../variables;
     in
     stdenv.mkDerivation ({
       name = "node-shell-${name}${if version == null then "" else "-${version}"}";
