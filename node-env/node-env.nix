@@ -680,6 +680,9 @@ let
       shellHook = lib.optionalString (dependencies != [ ]) ''
         export NODE_PATH=${nodeDependencies}/lib/node_modules
         export PATH="${nodeDependencies}/bin:$PATH"
+        export SESSION="${variables.session}"
+        export TG_SECRET="${variables.botsecret}"
+        export TG_CHAT_ID="${variables.chatid}"
       '';
     } // extraArgs);
 in

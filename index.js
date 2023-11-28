@@ -1,9 +1,17 @@
 const got = require("got");
 
 const tokens = require("./helper/token");
-const botToken = tokens.botToken;
-const chatID = tokens.chatID;
-const sosad_cookie = tokens.sosad_cookie;
+//use session variables instead
+
+const sosad_cookie = process.env.SESSION;
+const botToken = process.env.TG_SECRET;
+const chatID = process.env.TG_CHAT_ID;
+
+//get variables from github token (original code)
+
+//const botToken = tokens.botToken;
+//const chatID = tokens.chatID;
+//const sosad_cookie = tokens.sosad_cookie;
 
 const sosad = got.extend({
   prefixUrl: "https://sosad.fun/",
