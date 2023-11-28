@@ -1,0 +1,6 @@
+[Unit]
+Description = "fww checkin"
+
+[Service]
+# use which nix-shell to find out nix-shell path
+ExecStart = /path/to/nix-shell -A shell /path/to/fww-checkin --command "node /path/to/fww-checkin/index.js"

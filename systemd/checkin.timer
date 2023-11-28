@@ -1,0 +1,10 @@
+[Unit]
+Description=Run fww checkin daily
+
+[Timer]
+#edit yout time here
+OnCalendar=*-*-* 09:30:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target

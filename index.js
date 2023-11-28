@@ -46,7 +46,7 @@ function teleMsg(msg) {
     const response = await sosad("qiandao");
 
     let now = new Date().toLocaleString("zh-CN", {
-      timeZone: "Australia/Sydney",
+      timeZone: "Asia/Taipei",
       timeZoneName: "long",
     });
 
