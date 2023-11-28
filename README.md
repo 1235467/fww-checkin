@@ -1,5 +1,4 @@
 # Sosad Checkin
 
-正在对 Scripts 进行大版本更新。敬请期待。
+Usage: nix-shell -A shell to get into a env with node and required dependencies
 
-如果使用 Script 出现问题，请通过 Telegram Group 交流：https://t.me/+j5qFmtSEj_04ODU1
