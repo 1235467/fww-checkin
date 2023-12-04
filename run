@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-nix-shell -A shell ~/fww-checkin --command "node ~/fww-checkin/index.js -> /tmp/fww-checkin.log"
+nix-shell -A shell /media/gamedisk1/Projects/fww-checkin --command "node /media/gamedisk1/Projects/fww-checkin/index.js -> /tmp/fww-checkin.log"
