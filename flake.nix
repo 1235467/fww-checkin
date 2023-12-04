@@ -11,6 +11,9 @@
   outputs = { self, nixpkgs, flake-utils, gitignore, ... }:
     flake-utils.lib.eachDefaultSystem (system:
       let
+        # EDIT THIS
+        variables = import ./variables/default.nix.template;
+
         pkgs = import nixpkgs { inherit system; };
         nodejs = pkgs.nodejs;
         node2nixOutput = import ./default.nix { inherit pkgs nodejs system; };
@@ -44,13 +47,18 @@
             chmod a+x $out/bin/example-ts-nix
             runHook postInstall
           '';
+
         };
       in with pkgs; {
         defaultPackage = app;
         devShell = mkShell {
         buildInputs = [ nodejs node2nix ];
+        NODE_PATH = "${nodeDeps}/lib/node_modules";
+        SESSION="${variables.session}";
+        TG_SECRET="${variables.botsecret}";
+        TG_CHAT_ID="${variables.chatid}";
         shellHook = ''
-           export NODE_PATH = ${nodeDeps}/lib/node_modules
+            #node index.js
           '';
         };
       });
