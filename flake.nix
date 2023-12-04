@@ -20,7 +20,7 @@
         # NOTE: may want to try https://github.com/svanderburg/node2nix/issues/301 to limit rebuilds
         nodeDeps = node2nixOutput.nodeDependencies;
       in with pkgs; {
-        defaultPackage = app;
+        #defaultPackage = app;
         devShell = mkShell {
         buildInputs = [ nodejs node2nix ];
         NODE_PATH = "${nodeDeps}/lib/node_modules";
