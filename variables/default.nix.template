@@ -1,5 +1,5 @@
 {
-#sosad cookies
+#sosad cookies  (In HTTP cookies format)
 session = "";
 #Telegram ChatID
 chatid = "";
