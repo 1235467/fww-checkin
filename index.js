@@ -19,7 +19,7 @@ const sosad = got.extend({
   headers: {
     Cookie: sosad_cookie,
     "user-agent":
-      "Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36",
+      "Mozilla/5.0 (X11; Linux x86_64; rv:125.0) Gecko/20100101 Firefox/125.0",
   },
 });
 
